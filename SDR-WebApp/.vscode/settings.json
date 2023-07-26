@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/011ba694-fa59-40a7-8113-53a26f11362d/resourceGroups/rg-sdrcore-dev-eastus/providers/Microsoft.Web/sites/apps-sdrui-dev-eastus",
+    "appService.deploySubpath": "dist\\SDR-WebApp"
+}

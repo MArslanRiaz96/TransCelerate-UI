@@ -1,0 +1,109 @@
+<div class="container-fluid">
+  <div class="row">
+    <h2 *ngIf="!showError" class="col-9 custom-header-sec">
+      <strong
+        >{{ finalVal.accordianName }}
+        <span *ngIf="route.children.length === 0 || soaNavigationBoolean"
+          >Version {{ sponsorVersionId }}</span
+        ></strong
+      >
+    </h2>
+    <div
+      class="col-3 custom-button-sec"
+      *ngIf="route.children.length === 0 && !showError"
+    >
+      <button
+        (click)="auditTrail()"
+        class="btn btn-primary btn-sm versionButton"
+      >
+        View Revision History
+      </button>
+      <span
+        class="text-right"
+        [title]="
+          !isValidUSDMVersion
+            ? 'SoA Matrix cannot be generated for this USDM Version.'
+            : ''
+        "
+      >
+        <button
+          (click)="soaMatrix()"
+          class="btn btn-primary btn-sm soaButton"
+          [disabled]="!isValidUSDMVersion"
+        >
+          View SoA Matrix
+        </button>
+      </span>
+    </div>
+  </div>
+  <div class="col-sm-12" *ngIf="route.children.length === 0">
+    <app-error-component *ngIf="showError"></app-error-component>
+    <div class="row mt-n4">
+      <div class="col-4 border studyElement">
+        <div class="outerDiv">
+          <div
+            class="titleName"
+            [ngClass]="{ activeSelected: finalVal.isHighlighted }"
+            data-toggle="tooltip"
+            data-placement="top"
+            [title]="finalVal.accordianName"
+            (click)="showTableContent(finalVal, true, finalVal)"
+          >
+            {{ heading }}
+          </div>
+          <ul>
+            <ng-container
+              *ngTemplateOutlet="recursiveListTmpl; context: { acc: finalVal }"
+            ></ng-container>
+          </ul>
+
+          <ng-template #recursiveListTmpl let-acc="acc">
+            <ul *ngFor="let item of acc.subAccordianList; let i = index">
+              <li
+                [ngClass]="{ isSelected: item.isSelected }"
+                *ngIf="item.isShow"
+                (click)="
+                  showTableContent(item, false, acc); $event.stopPropagation()
+                "
+              >
+                <span [ngClass]="{ activeSelected: item.isHighlighted }">
+                  {{ item.accordianName | custom }}
+                </span>
+                <ul>
+                  <ng-container
+                    *ngTemplateOutlet="
+                      recursiveListTmpl;
+                      context: { acc: item }
+                    "
+                  ></ng-container>
+                </ul>
+              </li>
+            </ul>
+          </ng-template>
+        </div>
+      </div>
+
+      <div class="col-8 border studyElement tableData">
+        <table
+          role="presentation"
+          aria-describedby="mydesc"
+          class="table-bordered outerDiv"
+          *ngIf="tablecontent.length > 0"
+        >
+          <tr *ngFor="let content of tablecontent">
+            <td>{{ content?.name | custom }}</td>
+            <td>{{ content?.value }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

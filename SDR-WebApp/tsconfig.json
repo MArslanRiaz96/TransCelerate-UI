@@ -1,0 +1,50 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2017",
+    "module": "es2020",
+    "lib": [
+      "es2020",
+      "dom"
+    ],
+    "resolveJsonModule": true,
+    "paths": {
+      "exceljs": [
+        "node_modules/exceljs/dist/exceljs.min"
+      ]
+    }
+  },
+  "typedocOptions": {
+    "entryPoints": [
+      "src/app/features/dashboard/components/recent-activity/recent-activity.component.ts",
+      "src/app/features/search-study/components/search-form/search-form.component.ts",
+      "src/app/shared/components/audit-trail/audit-trail.component.ts",
+      "src/app/shared/components/version-comparison/version-comparison.component.ts",
+      "src/app/features/login/components/login/login.component.ts",
+      "src/app/shared/components/study-element-description/study-element-description.component.ts"
+    ],
+    "out": "docs"
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

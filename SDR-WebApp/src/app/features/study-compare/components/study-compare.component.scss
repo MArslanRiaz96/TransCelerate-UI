@@ -1,0 +1,86 @@
+.compareOuter {
+  border: 1px solid;
+  border-radius: 7px;
+  .search-text-div {
+    padding: 0px;
+  }
+  .search-icon-div {
+    padding: 0px;
+    cursor: pointer;
+    transform: translate(10px, 10px);
+  }
+}
+
+.gridOuter {
+  height: 180px;
+  width: 100%;
+}
+
+.searchGrid {
+  width: 100%;
+  height: 100%;
+}
+.ovalText {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 0px 10px !important;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transform: translate(0%, 50%);
+  border-radius: 63px;
+  text-overflow: ellipsis;
+  max-width: 230px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+.paddingTop {
+  margin: 7px 0px;
+}
+.compareButton {
+  margin-top: 20px;
+  margin-left: -27px;
+}
+.compare {
+  text-align: center;
+  padding: 13px 0px 0px 79px;
+  font-weight: bold;
+}
+.to {
+  text-align: center;
+  padding: 16px 48px 0px 7px;
+  font-weight: bold;
+}
+.compare-div-btn {
+  .searchButton {
+    margin: 8px 5px;
+  }
+  .clearButton {
+    margin: 8px 5px;
+  }
+}
+.search-form {
+  border: 1px solid #c4c4c4;
+  padding: 10px;
+  .search-form-row {
+    margin: 5px;
+    .input-label {
+      padding: 8px;
+    }
+    .inputDiv {
+      padding: 0px;
+    }
+  }
+  .buttonClass,
+  .buttonGroup {
+    .btn {
+      margin: 0px 5px;
+    }
+  }
+}

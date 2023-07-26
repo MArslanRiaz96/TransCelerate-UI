@@ -1,0 +1,91 @@
+li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+li:before {
+  content: "+";
+  font-size: 12pt;
+  font-weight: bolder;
+}
+
+.isSelected:before {
+  content: "-" !important;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.studyElement {
+  height: 350px;
+  overflow-x: auto;
+}
+
+.container {
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.titleName {
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.box {
+  background-clip: padding-box;
+}
+
+table,
+th,
+td {
+  border: 2px solid black;
+}
+
+table {
+  border-bottom: 0;
+  border-left: 0;
+}
+
+td,
+th {
+  border-top: 0;
+  border-right: 0;
+  padding: 10px;
+  min-width: 100px;
+}
+
+.activeSelected {
+  font-weight: bolder;
+}
+
+h2 {
+  margin: 0px;
+}
+
+.textCenter {
+  display: none;
+}
+
+.versionButton {
+  padding: 1px 6px;
+  margin: 0px 5px;
+  float: right;
+}
+
+.soaButton {
+  @extend .versionButton;
+  // right: 150px;
+  // top: -28px;
+}
+
+.custom-button-sec {
+  padding: 0;
+}
+.text-right {
+  float: right;
+}

@@ -1,0 +1,17 @@
+.my-code-editor {
+  height: 400px !important;
+}
+
+.compareDiv {
+  height: calc(100vh - 175px);
+  border: 1px solid;
+}
+.back-arrow-div {
+  position: relative;
+  .exit-btn {
+    position: absolute;
+    right: 0px;
+    top: -30px;
+    padding: 1px 6px;
+  }
+}

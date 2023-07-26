@@ -1,0 +1,280 @@
+/* You can add global styles to this file, and also import other style files */
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-balham.css";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+:root {
+  --color-text: #111111;
+  --color-link: #125699;
+  --color-background: #f57242;
+  --font-color: #fff;
+}
+.recentWidget {
+  .ag-root {
+    border: 1px solid;
+  }
+  .ag-header {
+    background: var(--color-background);
+  }
+  .ag-header-cell-text {
+    color: var(--font-color);
+  }
+
+  .ag-cell {
+    font-size: small;
+    //border-bottom: 3px solid;
+  }
+  .studyTitleContent {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .ag-root-wrapper.ag-layout-normal {
+    height: 180% !important;
+  }
+}
+.linkSpan {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+.linkSpan:hover {
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #555;
+}
+body {
+  overflow-x: hidden;
+}
+.ag-tooltip {
+  background-color: white;
+  color: black;
+  border-radius: 2px;
+  padding: 2px 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #545454;
+  font-size: smaller;
+}
+.ag-header-cell,
+.ag-header-group-cell {
+  border: 1px solid black;
+}
+.ag-cell {
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+}
+.ag-header-cell-text {
+  padding-left: 2px;
+  font-size: medium;
+}
+.gridOuter {
+  .ag-header {
+    background: var(--color-background);
+  }
+  .ag-header-cell-text {
+    color: var(--font-color);
+  }
+  .imgStyle {
+    height: 200px;
+    color: #fff;
+  }
+}
+.ag-pivot-off .ag-header-group-cell {
+  font-size: 50px;
+  //color: red;
+}
+.imgStyle {
+  height: 200px;
+  color: #fff;
+}
+.search {
+  .imgStyle {
+    width: 20px;
+  }
+  .ag-header-icon {
+    text-align: left;
+  }
+}
+.auditDiv {
+  .imgStyle {
+    width: 20px;
+  }
+  .ag-header-icon {
+    text-align: left;
+    margin-left: 25px;
+  }
+  .ag-header-cell-text {
+    min-width: 80px;
+    max-width: 150px;
+  }
+}
+
+.ag-header-cell-label .ag-header-cell-text {
+  white-space: pre-wrap !important;
+}
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+body {
+  ::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+  }
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background: rgba(0, 0, 0, 0.9);
+  }
+}
+.container-radio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: -9px;
+  right: 137px;
+  height: 20px;
+  width: 23px;
+  border-radius: 100%;
+  border: 2px solid#0d6efd;
+}
+
+/* When the radio button is checked, add a blue background */
+.container-radio input:checked ~ .checkmark {
+  background-color: #0d6efd;
+}
+.container-radio input:disabled ~ .checkmark {
+  //background-color: #ccc;
+  border: 2px solid#ccc;
+  pointer-events: none;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container-radio input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container-radio .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.editorHeading {
+  font-weight: bold;
+}
+
+.diffViewport {
+  min-height: 64px !important;
+}
+.navbar-nav {
+  flex-direction: row;
+}
+.border-bottom-none {
+  border-bottom-style: none;
+}
+.border-top-none {
+  border-top-style: none;
+}
+.border-none {
+  border-bottom-style: none;
+  border-top-style: none;
+}
+.multiselect-dropdown .dropdown-btn .selected-item-container .selected-item {
+  border: 1px solid #ddd !important;
+  margin-right: 4px;
+  background: #ddd !important;
+  padding: 0 5px;
+  color: #000 !important;
+  border-radius: 2px;
+  float: left;
+  max-width: 100% !important;
+  a {
+    color: #000 !important;
+  }
+}
+
+.multiselect-item-checkbox input[type="checkbox"]:checked + div:before {
+  background: #0d6efd !important;
+}
+
+.multiselect-item-checkbox input[type="checkbox"] + div:before {
+  border: 2px solid #0d6efd !important;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 700px !important;
+    margin: 1.75rem auto;
+  }
+}
+.admin {
+  a {
+    cursor: pointer;
+    margin-top: 30px;
+    display: block;
+  }
+}
+.admin-user {
+  a {
+    margin: -4% 96%;
+  }
+}
+input[type="text"]:disabled {
+  background-color: #eceeef !important;
+}
+select {
+  -webkit-appearance: listbox !important;
+}
+// button {
+//   border-radius: 5px;
+//   color: #fff;
+//   background-color: #0d6efd !important;
+//   border-color: #0d6efd !important;
+// }
+// button:disabled {
+//   background-color: #c1c1c1 !important;
+//   color: black !important;
+//   opacity: 0.45 !important;
+//   border-color: #c1c1c1 !important;
+// }
+.modal-body .btn {
+  margin: 0 5px;
+}
